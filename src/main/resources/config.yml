@@ -1,0 +1,45 @@
+# ============================================================================
+# Configuración principal de Iutils
+# ============================================================================
+# Este archivo funciona de forma 100% local, sin servicios externos.
+# Tras realizar cambios, utiliza el comando "/iutils reload" (permiso: iutils.admin)
+# para validar y aplicar la nueva configuración sin reiniciar el servidor.
+# ============================================================================
+
+general:
+  # Idioma predeterminado del plugin (por ejemplo: es_ES).
+  language: "es_ES"
+
+  # Prefijo global del plugin que se antepone a los mensajes cuando está habilitado.
+  prefix: "<gradient:#00d2ff:#3a7bd5><bold>[Iutils]</bold></gradient> "
+
+  # Formato utilizado para interpretar los mensajes y el prefijo.
+  # Valores admitidos:
+  #   - MINIMESSAGE : Etiquetas modernas de Adventure MiniMessage (<green>, <bold>, <gradient:...>)
+  #   - LEGACY      : Códigos de color clásicos con ampersand (&a, &e, &l, &#RRGGBB)
+  #   - PLAIN       : Texto plano sin procesamiento de colores ni estilos
+  format: "MINIMESSAGE"
+
+welcome:
+  # Activa (true) o desactiva (false) el envío del mensaje de bienvenida al entrar al servidor.
+  enabled: true
+
+  # Define si el mensaje de bienvenida debe incluir el prefijo configurado en "general.prefix".
+  use-prefix: true
+
+  # Mensaje de bienvenida que recibirá el jugador al conectarse.
+  # Marcadores disponibles:
+  #   - {player} : Nombre del jugador que acaba de entrar al servidor.
+  message: "<green>¡Bienvenido al servidor, <yellow>{player}</yellow>! Esperamos que disfrutes tu estancia.</green>"
+
+block-refill:
+  # Activa (true) o desactiva (false) la recarga automática de bloques en la mano
+  # cuando un jugador en modo Supervivencia coloca el último bloque de su stack.
+  enabled: true
+
+tool-swap:
+  # Activa (true) o desactiva (false) el intercambio automático de herramientas: cuando la
+  # herramienta en uso está a punto de romperse, se intercambia por otra del mismo tipo
+  # que tengas en el inventario (solo espadas, palas, picos, azadas y hachas).
+  # Prioridad: netherita > diamante > oro > hierro > cobre > piedra > madera.
+  enabled: true

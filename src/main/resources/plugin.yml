@@ -1,0 +1,18 @@
+name: Iutils
+version: '${version}'
+main: io.github.iutils.bootstrap.IutilsPlugin
+api-version: '${minecraftVersion}'
+description: Plugin modular de utilidades y bienvenida para servidores Minecraft Paper.
+authors:
+  - 925ctrl (Emerlive)
+
+commands:
+  iutils:
+    description: Comando administrativo principal de Iutils.
+    usage: /iutils reload
+    permission: iutils.admin
+
+permissions:
+  iutils.admin:
+    description: Permite ejecutar comandos administrativos de Iutils, como recargar la configuracion.
+    default: op
